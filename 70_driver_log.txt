@@ -1,27 +1,54 @@
-2021/06/19 20:42:39 Starting App Insight Logger for task:  runTaskLet
-2021/06/19 20:42:39 Version: 3.0.01622.0001 Branch: .SourceBranch Commit: 1141612
-2021/06/19 20:42:39 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/info
-2021/06/19 20:42:39 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
-[2021-06-19T20:42:40.076606] Entering context manager injector.
-[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--min_samples_split', '4', '--n_estimators', '20'])
+2021/06/19 21:51:55 Starting App Insight Logger for task:  runTaskLet
+2021/06/19 21:51:55 Version: 3.0.01622.0001 Branch: .SourceBranch Commit: 1141612
+2021/06/19 21:51:55 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/info
+2021/06/19 21:51:55 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+[2021-06-19T21:51:55.749542] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--min_samples_split', '6', '--n_estimators', '20'])
 Script type = None
-[2021-06-19T20:42:41.422492] Entering Run History Context Manager.
-[2021-06-19T20:42:43.156880] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147518/azureml/hd_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0/mounts/workspaceblobstore/azureml/HD_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0
-[2021-06-19T20:42:43.157339] Preparing to call script [train.py] with arguments:['--min_samples_split', '4', '--n_estimators', '20']
-[2021-06-19T20:42:43.158435] After variable expansion, calling script [train.py] with arguments:['--min_samples_split', '4', '--n_estimators', '20']
+[2021-06-19T21:51:56.946159] Entering Run History Context Manager.
+[2021-06-19T21:51:58.589586] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147518/azureml/hd_cc3fa2f0-2d88-4728-b4de-68bd0c9bd085_2/mounts/workspaceblobstore/azureml/HD_cc3fa2f0-2d88-4728-b4de-68bd0c9bd085_2
+[2021-06-19T21:51:58.597809] Preparing to call script [train.py] with arguments:['--min_samples_split', '6', '--n_estimators', '20']
+[2021-06-19T21:51:58.597857] After variable expansion, calling script [train.py] with arguments:['--min_samples_split', '6', '--n_estimators', '20']
 
-2021/06/19 20:42:44 Not exporting to RunHistory as the exporter is either stopped or there is no data.
+2021/06/19 21:52:00 Not exporting to RunHistory as the exporter is either stopped or there is no data.
 Stopped: false
 OriginalData: 1
 FilteredData: 0.
 
 
-[2021-06-19T20:42:44.811310] The experiment failed. Finalizing run...
+[2021-06-19T21:52:08.525730] The experiment failed. Finalizing run...
 Cleaning up all outstanding Run operations, waiting 900.0 seconds
 3 items cleaning up...
-Cleanup took 0.19471049308776855 seconds
+Cleanup took 0.19448494911193848 seconds
 Traceback (most recent call last):
-  File "/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147518/azureml/hd_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0/mounts/workspaceblobstore/azureml/HD_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0/azureml-setup/context_manager_injector.py", line 234, in execute_with_context
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_error_handling.py", line 65, in _validate_has_data
+    dataflow.verify_has_data()
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/_loggerfactory.py", line 210, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/dataflow.py", line 875, in verify_has_data
+    if len(self.take(1)._to_pyrecords()) == 0:
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/dataflow.py", line 795, in _to_pyrecords
+    span_context=to_dprep_span_context(span.get_context() if span else None)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/_aml_helper.py", line 38, in wrapper
+    return send_message_func(op_code, message, cancellation_token)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/engineapi/api.py", line 120, in execute_anonymous_activity
+    response = self._message_channel.send_message('Engine.ExecuteActivity', message_args, cancellation_token)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/engineapi/engine.py", line 291, in send_message
+    raise_engine_error(response['error'])
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/dataprep/api/errorhandlers.py", line 10, in raise_engine_error
+    raise ExecutionError(error_response)
+azureml.dataprep.api.errorhandlers.ExecutionError: 
+Error Code: ScriptExecution.StreamAccess.NotFound
+Failed Step: 93f92a90-dab6-4dd4-9914-7cbe415749e4
+Error Message: ScriptExecutionException was caused by StreamAccessException.
+  StreamAccessException was caused by NotFoundException.
+    Found no resources for the input provided: 'https://mlstrg147518.file.core.windows.net/azureml-filestore-7ea1b350-c4f3-4e5b-8220-7ae0f6e4918d/train.csv'
+| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147518/azureml/hd_cc3fa2f0-2d88-4728-b4de-68bd0c9bd085_2/mounts/workspaceblobstore/azureml/HD_cc3fa2f0-2d88-4728-b4de-68bd0c9bd085_2/azureml-setup/context_manager_injector.py", line 234, in execute_with_context
     runpy.run_path(sys.argv[0], globals(), run_name="__main__")
   File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/runpy.py", line 263, in run_path
     pkg_name=pkg_name, script_name=fname)
@@ -33,18 +60,24 @@ Traceback (most recent call last):
     ds = TabularDatasetFactory.from_delimited_files(data_path)
   File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
     return func(*args, **kwargs)
-  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 324, in from_delimited_files
-    path = _validate_and_normalize_path(path)
-  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1006, in _validate_and_normalize_path
-    raise invalid_path_error
-azureml.exceptions._azureml_exception.UserErrorException: UserErrorException:
-	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead.
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 355, in from_delimited_files
+    validate or infer_column_types or _is_inference_required(set_column_types))
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1049, in _transform_and_validate
+    _validate_has_data(dataflow, 'Cannot load any data from the specified path. '
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_error_handling.py", line 68, in _validate_has_data
+    raise DatasetValidationError(error_message + '\n' + e.compliant_message, exception=e)
+azureml.data.dataset_error_handling.DatasetValidationError: DatasetValidationError:
+	Message: Cannot load any data from the specified path. Make sure the path is accessible and contains data.
+ScriptExecutionException was caused by StreamAccessException.
+  StreamAccessException was caused by NotFoundException.
+    Found no resources for the input provided: '[REDACTED]'
+| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91
 	InnerException None
 	ErrorResponse 
 {
     "error": {
         "code": "UserError",
-        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead."
+        "message": "Cannot load any data from the specified path. Make sure the path is accessible and contains data.\nScriptExecutionException was caused by StreamAccessException.\n  StreamAccessException was caused by NotFoundException.\n    Found no resources for the input provided: '[REDACTED]'\n| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91"
     }
 }
 
@@ -55,42 +88,52 @@ Traceback (most recent call last):
     ds = TabularDatasetFactory.from_delimited_files(data_path)
   File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
     return func(*args, **kwargs)
-  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 324, in from_delimited_files
-    path = _validate_and_normalize_path(path)
-  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1006, in _validate_and_normalize_path
-    raise invalid_path_error
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 355, in from_delimited_files
+    validate or infer_column_types or _is_inference_required(set_column_types))
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1049, in _transform_and_validate
+    _validate_has_data(dataflow, 'Cannot load any data from the specified path. '
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_error_handling.py", line 68, in _validate_has_data
+    raise DatasetValidationError(error_message + '\n' + e.compliant_message, exception=e)
 UserScriptException: UserScriptException:
-	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead.
-	InnerException UserErrorException:
-	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead.
+	Message: Cannot load any data from the specified path. Make sure the path is accessible and contains data.
+ScriptExecutionException was caused by StreamAccessException.
+  StreamAccessException was caused by NotFoundException.
+    Found no resources for the input provided: '[REDACTED]'
+| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91
+	InnerException DatasetValidationError:
+	Message: Cannot load any data from the specified path. Make sure the path is accessible and contains data.
+ScriptExecutionException was caused by StreamAccessException.
+  StreamAccessException was caused by NotFoundException.
+    Found no resources for the input provided: '[REDACTED]'
+| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91
 	InnerException None
 	ErrorResponse 
 {
     "error": {
         "code": "UserError",
-        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead."
+        "message": "Cannot load any data from the specified path. Make sure the path is accessible and contains data.\nScriptExecutionException was caused by StreamAccessException.\n  StreamAccessException was caused by NotFoundException.\n    Found no resources for the input provided: '[REDACTED]'\n| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91"
     }
 }
 	ErrorResponse 
 {
     "error": {
         "code": "UserError",
-        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead."
+        "message": "Cannot load any data from the specified path. Make sure the path is accessible and contains data.\nScriptExecutionException was caused by StreamAccessException.\n  StreamAccessException was caused by NotFoundException.\n    Found no resources for the input provided: '[REDACTED]'\n| session_id=c4831d72-842a-4117-b3c0-26d23ab3dd91"
     }
 }
 
-[2021-06-19T20:42:45.119979] Finished context manager injector with Exception.
-2021/06/19 20:42:48 Skipping parsing control script error. Reason: Error json file doesn't exist. This most likely means that no errors were written to the file. File path: /mnt/batch/tasks/workitems/372c9ae4-fa66-4b79-8351-e580d134c258/job-1/hd_f64da30e-6e11-48c_8d0842dc-4ccc-4bab-b942-3d710604a229/wd/runTaskLetTask_error.json
-2021/06/19 20:42:48 Wrapper cmd failed with err: exit status 1
-2021/06/19 20:42:48 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
-2021/06/19 20:42:48 mpirun version string: {
+[2021-06-19T21:52:08.853579] Finished context manager injector with Exception.
+2021/06/19 21:52:16 Skipping parsing control script error. Reason: Error json file doesn't exist. This most likely means that no errors were written to the file. File path: /mnt/batch/tasks/workitems/372c9ae4-fa66-4b79-8351-e580d134c258/job-1/hd_cc3fa2f0-2d88-472_6b0ad156-2936-4fc5-97f9-4d364cfdb213/wd/runTaskLetTask_error.json
+2021/06/19 21:52:16 Wrapper cmd failed with err: exit status 1
+2021/06/19 21:52:16 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2021/06/19 21:52:16 mpirun version string: {
 mpirun (Open MPI) 3.1.2
 
 Report bugs to http://www.open-mpi.org/community/help/
 }
-2021/06/19 20:42:48 Not exporting to RunHistory as the exporter is either stopped or there is no data.
+2021/06/19 21:52:16 Not exporting to RunHistory as the exporter is either stopped or there is no data.
 Stopped: false
 OriginalData: 2
 FilteredData: 0.
-2021/06/19 20:42:48 Process Exiting with Code:  1
-2021/06/19 20:42:48 All App Insights Logs was send successfully
+2021/06/19 21:52:16 Process Exiting with Code:  1
+2021/06/19 21:52:18 All App Insights Logs was send successfully
