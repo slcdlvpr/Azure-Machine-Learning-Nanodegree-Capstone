@@ -1,0 +1,96 @@
+2021/06/19 20:42:39 Starting App Insight Logger for task:  runTaskLet
+2021/06/19 20:42:39 Version: 3.0.01622.0001 Branch: .SourceBranch Commit: 1141612
+2021/06/19 20:42:39 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/info
+2021/06/19 20:42:39 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+[2021-06-19T20:42:40.076606] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--min_samples_split', '4', '--n_estimators', '20'])
+Script type = None
+[2021-06-19T20:42:41.422492] Entering Run History Context Manager.
+[2021-06-19T20:42:43.156880] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147518/azureml/hd_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0/mounts/workspaceblobstore/azureml/HD_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0
+[2021-06-19T20:42:43.157339] Preparing to call script [train.py] with arguments:['--min_samples_split', '4', '--n_estimators', '20']
+[2021-06-19T20:42:43.158435] After variable expansion, calling script [train.py] with arguments:['--min_samples_split', '4', '--n_estimators', '20']
+
+2021/06/19 20:42:44 Not exporting to RunHistory as the exporter is either stopped or there is no data.
+Stopped: false
+OriginalData: 1
+FilteredData: 0.
+
+
+[2021-06-19T20:42:44.811310] The experiment failed. Finalizing run...
+Cleaning up all outstanding Run operations, waiting 900.0 seconds
+3 items cleaning up...
+Cleanup took 0.19471049308776855 seconds
+Traceback (most recent call last):
+  File "/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147518/azureml/hd_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0/mounts/workspaceblobstore/azureml/HD_f64da30e-6e11-48ce-844c-b8a2a6f2ea63_0/azureml-setup/context_manager_injector.py", line 234, in execute_with_context
+    runpy.run_path(sys.argv[0], globals(), run_name="__main__")
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "train.py", line 26, in <module>
+    ds = TabularDatasetFactory.from_delimited_files(data_path)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 324, in from_delimited_files
+    path = _validate_and_normalize_path(path)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1006, in _validate_and_normalize_path
+    raise invalid_path_error
+azureml.exceptions._azureml_exception.UserErrorException: UserErrorException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead."
+    }
+}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    ds = TabularDatasetFactory.from_delimited_files(data_path)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 324, in from_delimited_files
+    path = _validate_and_normalize_path(path)
+  File "/azureml-envs/azureml_5a33d0b1846b3717ef969a5f35fc31b7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1006, in _validate_and_normalize_path
+    raise invalid_path_error
+UserScriptException: UserScriptException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead.
+	InnerException UserErrorException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead."
+    }
+}
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.Url of blob can't contains SAS token, please use datastore instead."
+    }
+}
+
+[2021-06-19T20:42:45.119979] Finished context manager injector with Exception.
+2021/06/19 20:42:48 Skipping parsing control script error. Reason: Error json file doesn't exist. This most likely means that no errors were written to the file. File path: /mnt/batch/tasks/workitems/372c9ae4-fa66-4b79-8351-e580d134c258/job-1/hd_f64da30e-6e11-48c_8d0842dc-4ccc-4bab-b942-3d710604a229/wd/runTaskLetTask_error.json
+2021/06/19 20:42:48 Wrapper cmd failed with err: exit status 1
+2021/06/19 20:42:48 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2021/06/19 20:42:48 mpirun version string: {
+mpirun (Open MPI) 3.1.2
+
+Report bugs to http://www.open-mpi.org/community/help/
+}
+2021/06/19 20:42:48 Not exporting to RunHistory as the exporter is either stopped or there is no data.
+Stopped: false
+OriginalData: 2
+FilteredData: 0.
+2021/06/19 20:42:48 Process Exiting with Code:  1
+2021/06/19 20:42:48 All App Insights Logs was send successfully
