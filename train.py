@@ -20,11 +20,11 @@ from sklearn.preprocessing import StandardScaler
 #workspace = Workspace(subscription_id, resource_group, workspace_name)
 #dataset = Dataset.get_by_name(workspace, name='crossell')
 #ds = dataset.to_pandas_dataframe()
-
-data_path = 'train.csv'
+             
+data_path = 'https://mlstrg147518.file.core.windows.net/azureml-filestore-7ea1b350-c4f3-4e5b-8220-7ae0f6e4918d/train.csv'
 ds = TabularDatasetFactory.from_delimited_files(data_path)
 
-#get the run context 
+#get the run context   
 run = Run.get_context()
 
 # load clean data and get the target column data 
@@ -63,6 +63,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
