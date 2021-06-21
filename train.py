@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 import argparse
@@ -21,14 +22,28 @@ from sklearn.preprocessing import StandardScaler
 #dataset = Dataset.get_by_name(workspace, name='crossell')
 #ds = dataset.to_pandas_dataframe()
              
-data_path = 'https://mlstrg147518.file.core.windows.net/azureml-filestore-7ea1b350-c4f3-4e5b-8220-7ae0f6e4918d/train.csv'
-ds = TabularDatasetFactory.from_delimited_files(data_path)
+#data_path = 'https://mlstrg147518.file.core.windows.net/code-391ff5ac-6576-460f-ba4d-7e03433c68b6/Users/odl_user_147518/train.csv'
+#ds = TabularDatasetFactory.from_delimited_files(data_path)
 
+
+from azureml.core import Workspace, Dataset
+
+subscription_id = '3e42d11f-d64d-4173-af9b-12ecaa1030b3'
+resource_group = 'aml-quickstarts-147623'
+workspace_name = 'quick-starts-ws-147623'
+
+workspace = Workspace(subscription_id, resource_group, workspace_name)
+
+dataset = Dataset.get_by_name(workspace, name='crossell')
+#dataset.to_pandas_dataframe()
+
+
+    
 #get the run context   
 run = Run.get_context()
 
 # load clean data and get the target column data 
-x_df = ds.to_pandas_dataframe().dropna()
+x_df = dataset.to_pandas_dataframe().dropna()
 y_df = x_df.pop("Response")
 
 
@@ -63,3 +78,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
