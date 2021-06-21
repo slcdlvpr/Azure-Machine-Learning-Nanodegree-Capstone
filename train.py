@@ -7,7 +7,7 @@ import joblib
 from azureml.core.run import Run
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import accuracy_score
 from azureml.core import Workspace, Dataset
 from azureml.data.dataset_factory import TabularDatasetFactory
 from sklearn.preprocessing import StandardScaler
@@ -73,8 +73,10 @@ def main():
     #setup
     model = RandomForestClassifier(n_estimators=args.n_estimators, random_state=42, min_samples_split=args.min_samples_split).fit(x_train, y_train)
 
+    predictions = model.predict(x_test)
+
     #process and score 
-    accuracy = model.score(x_test, y_test)
+    accuracy = accuracy_score(predictions, y_test)
     run.log("Accuracy", float(accuracy))
 
     # Saving model to the output folder 
