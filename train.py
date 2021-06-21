@@ -26,24 +26,29 @@ from sklearn.preprocessing import StandardScaler
 #ds = TabularDatasetFactory.from_delimited_files(data_path)
 
 
-from azureml.core import Workspace, Dataset
-
 subscription_id = '3e42d11f-d64d-4173-af9b-12ecaa1030b3'
 resource_group = 'aml-quickstarts-147623'
 workspace_name = 'quick-starts-ws-147623'
 
-workspace = Workspace(subscription_id, resource_group, workspace_name)
+#get the run context   
+run = Run.get_context()
 
-dataset = Dataset.get_by_name(workspace, name='crossell')
+workspace = run.experiment.workspace
+
+dataset = Dataset.get_by_name(workspace, name='crosssell')
 #dataset.to_pandas_dataframe()
 
 
     
-#get the run context   
-run = Run.get_context()
+
 
 # load clean data and get the target column data 
+
 x_df = dataset.to_pandas_dataframe().dropna()
+x_df["Gender"] = x_df.Gender.apply(lambda s: 1 if s == "Male" else 0)
+x_df["Vehicle_Damage"] = x_df.Vehicle_Damage.apply(lambda s: 1 if s == "Yes" else 0)
+x_df["Vehicle_Age"] = x_df.Vehicle_Age.apply(lambda s: 2 if s == "> 2 Years" else 1)
+
 y_df = x_df.pop("Response")
 
 
