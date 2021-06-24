@@ -1,36 +1,32 @@
-2021/06/21 20:58:43 Starting App Insight Logger for task:  runTaskLet
-2021/06/21 20:58:43 Version: 3.0.01622.0001 Branch: .SourceBranch Commit: 1141612
-2021/06/21 20:58:43 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/info
-2021/06/21 20:58:43 Http request failed with status: 500
-Response body: Unable to write to log.
-
-
-2021/06/21 20:58:43 Response code 500, retrying after 1 seconds
-[2021-06-21T20:58:44.360083] Entering context manager injector.
-2021/06/21 20:58:44 Attempt 2 of http call to http://10.0.0.4:16384/sendlogstoartifacts/info
-2021/06/21 20:58:44 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
-[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--min_samples_split', '2', '--n_estimators', '40'])
+2021/06/23 05:30:22 Starting App Insight Logger for task:  runTaskLet
+2021/06/23 05:30:22 Version: 3.0.01622.0001 Branch: .SourceBranch Commit: 1141612
+2021/06/23 05:30:22 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/info
+2021/06/23 05:30:22 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
+[2021-06-23T05:30:23.015831] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--C', '30', '--max_iter', '100'])
 Script type = None
-[2021-06-21T20:58:45.534675] Entering Run History Context Manager.
-2021/06/21 20:58:48 Not exporting to RunHistory as the exporter is either stopped or there is no data.
+[2021-06-23T05:30:23.574574] Entering Run History Context Manager.
+[2021-06-23T05:30:24.375947] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147751/azureml/hd_2f2a7943-04c6-451d-b810-c949fee8a59d_8/wd/azureml/HD_2f2a7943-04c6-451d-b810-c949fee8a59d_8
+[2021-06-23T05:30:24.376248] Preparing to call script [train.py] with arguments:['--C', '30', '--max_iter', '100']
+[2021-06-23T05:30:24.376269] After variable expansion, calling script [train.py] with arguments:['--C', '30', '--max_iter', '100']
+
+2021/06/23 05:30:27 Not exporting to RunHistory as the exporter is either stopped or there is no data.
 Stopped: false
 OriginalData: 1
 FilteredData: 0.
-[2021-06-21T20:58:52.061671] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-147650/azureml/hd_885908d5-ccb0-4fa2-a67e-fcead09d5ee8_1/mounts/workspaceblobstore/azureml/HD_885908d5-ccb0-4fa2-a67e-fcead09d5ee8_1
-[2021-06-21T20:58:52.061872] Preparing to call script [train.py] with arguments:['--min_samples_split', '2', '--n_estimators', '40']
-[2021-06-21T20:58:52.062376] After variable expansion, calling script [train.py] with arguments:['--min_samples_split', '2', '--n_estimators', '40']
+/azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/lib/python3.6/site-packages/sklearn/linear_model/logistic.py:433: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
 
 
-
-[2021-06-21T20:59:30.590704] The experiment completed successfully. Finalizing run...
+[2021-06-23T05:30:58.424345] The experiment completed successfully. Finalizing run...
 Cleaning up all outstanding Run operations, waiting 900.0 seconds
-3 items cleaning up...
-Cleanup took 0.4333000183105469 seconds
-[2021-06-21T20:59:31.215115] Finished context manager injector.
-2021/06/21 20:59:37 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
-2021/06/21 20:59:37 Not exporting to RunHistory as the exporter is either stopped or there is no data.
+2 items cleaning up...
+Cleanup took 0.42046380043029785 seconds
+[2021-06-23T05:30:59.046668] Finished context manager injector.
+2021/06/23 05:31:00 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
+2021/06/23 05:31:00 Not exporting to RunHistory as the exporter is either stopped or there is no data.
 Stopped: false
 OriginalData: 2
 FilteredData: 0.
-2021/06/21 20:59:37 Process Exiting with Code:  0
-2021/06/21 20:59:38 All App Insights Logs was send successfully
+2021/06/23 05:31:00 Process Exiting with Code:  0
+2021/06/23 05:31:01 All App Insights Logs was send successfully

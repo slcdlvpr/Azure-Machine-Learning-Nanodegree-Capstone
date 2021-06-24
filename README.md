@@ -2,24 +2,34 @@
 
 # Your Project Title Here
 
-*TODO:* Write a short introduction to your project.
+The project uses Insurance Crosssell  Dataset in azure workspace to train models using both Hyperdrive and AutoML.  The best model is determined and then a endpoint is created and tested using python sdk. The project was implemented using VS code and Azure Machine Learning Studio. 
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+The project requires access to a Azure Machine Learning account and the crosssell dataset.  Link to the dataset is provided later in this document.
 
 ## Dataset
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+Each row in the dataset represents a policy holder with the insurance company that is a potential sale of the companies car insurance product.  
+The data includes:
+    * Customer demographics 
+    * Age and condition of the customers vehicle 
+    * Is the customer a current policy holder 
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+Ths client is an Insurance company that has provided Health Insurance to its customers now they want a model to predict whether the policyholders (customers) from past year will also be interested in Vehicle Insurance provided by the company.
+
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
-
+Data is accessed via a dataset after it is downloaded from Kaggle and uploaded into the Azure ML studio. 
+Raw data can be accessed here <a href = "https://www.kaggle.com/anmolkumar/health-insurance-cross-sell-prediction">Crosssell Dataset</a>
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+In order to setup the automl run the following tasks were performed:
+
+* Specify the primary_metric: The metric that will be used is Accuracy.  We want to select the model that will most accurately predict if the customer will be interested in the car insurance
+* Set experiment_timeout_minutes (20): In order to limit consumed resources we set a max time out for the experiment. 
+* Enable_early_termination (True):  Abandon models that are not more accurate than currently completed models
+* Max_concurrent_iterations (5): Represents the maximum number of iterations that would be executed in parallel
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
