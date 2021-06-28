@@ -68,7 +68,7 @@ Setup the following
 * RandomParameterSampling setup:  This was selected because it would allow the range of values selected for the run.  It also supports early termination of a runs that are underperforming. 
 * BanditPolicy Setup :  Bandit terminates any runs where the primary metric is not within the specified slack factor compared to the best performing run.
 * max_concurrent_runs (5): The maximum number of runs to execute in parallel.
-* max_total_runs (20): The maximum total number of runs to create. 
+* max_total_runs (10): The maximum total number of runs to create. 
 
 
 ### Results
