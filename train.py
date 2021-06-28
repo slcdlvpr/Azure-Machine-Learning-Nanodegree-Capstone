@@ -45,6 +45,7 @@ import joblib
 run = Run.get_context()
 workspace = run.experiment.workspace
 dataset = Dataset.get_by_name(workspace, name='CrossSell Dataset')
+#datasettest = Dataset.get_by_name(workspace, name='CrossSell Test')
 
 
 #dataset.to_pandas_dataframe()  alternative method 
@@ -52,6 +53,7 @@ dataset = Dataset.get_by_name(workspace, name='CrossSell Dataset')
 # load clean data and get the target column data 
 def clean_data(data):
     x_df = data.to_pandas_dataframe().dropna()
+    x_df.pop("id")
     x_df["Gender"] = x_df.Gender.apply(lambda s: 1 if s == "Male" else 0)
     x_df["Vehicle_Damage"] = x_df.Vehicle_Damage.apply(lambda s: 1 if s == "Yes" else 0)
     x_df["Vehicle_Age"] = x_df.Vehicle_Age.apply(lambda s: 2 if s == "> 2 Years" else 1)
@@ -75,7 +77,10 @@ def main():
     args = parser.parse_args()
 
     x, y = clean_data(dataset)
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=42)
+    #xtest, yTest = clean_data(datasettest)
+    
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.5, random_state=99,shuffle=True)
+   
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
 

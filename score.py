@@ -13,8 +13,7 @@ from inference_schema.parameter_types.numpy_parameter_type import NumpyParameter
 
 def init():
     global deploy_model
-    model_name = 'best_model_output'
-    #model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'best_fit_model.pkl')
+    model_name = 'hyper_model'
     model_path = Model.get_model_path(model_name)
     deploy_model = joblib.load(model_path)
 
