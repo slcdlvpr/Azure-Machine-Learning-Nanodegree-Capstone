@@ -72,12 +72,24 @@ Setup the following
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+![HyperWidget](Images/HyperParameter/Widget.JPG)
 
+Below shows the different runs in the hyperparameter search space.  Note that each run shows the different parameters used for that run. 
+![HyperWidget](Images/HyperParameter/Runs.JPG)
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+### Things to improve
+* Convert model to onyx so that it can be easily shared. 
+* Review the fairness of the models. 
+* Do additional testing on the hyperdrive run to see if a larger dataset results in the same accuracy -- when this is available. 
+
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+As can be seen above the hyperdrive model was seen to be the most accurate. In fact the hyperdrive model was highly consistent across a wide range of hyperparameters. In discussing this with one of the mentors they indicated that the runs had completed and that the model was just very well suited for this dataset. In order to complete the lab I deployed the hyperdrive model and then tested the endpoint.  Screen shots from the test are shown below. 
+
+
+
+
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
