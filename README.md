@@ -50,7 +50,11 @@ with parameters.
 
 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+### Evaluation
+
+When elements of the data were examined it was found that a single feature was found to have an outsized impact on the likelyhood of a customer purchase. 
+
+![Importance](Images/Automl/FeatureImportance.JPG)
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
