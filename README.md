@@ -4,6 +4,8 @@
 The project uses Insurance Crosssell  Dataset in azure workspace to train models using both Hyperdrive and AutoML.  The best model is determined and then a endpoint is created and tested using python sdk. The project was implemented using VS code and Azure Machine Learning Studio. 
 
 # Project Architecture 
+Below is a high level overview of the project architecture.  
+
 ![Architecture](Images/Automl/TopImage.JPG)
 
 ## Project Set Up and Installation
@@ -25,6 +27,7 @@ Ths client is an Insurance company that has provided Health Insurance to its cus
 ### Access
 Data is accessed via a dataset after it is downloaded from Kaggle and uploaded into the Azure ML studio. 
 Raw data can be accessed here <a href = "https://www.kaggle.com/anmolkumar/health-insurance-cross-sell-prediction">Crosssell Dataset</a>
+
 ## Automated ML
 In order to setup the automl run the following tasks were performed:
 
@@ -32,9 +35,20 @@ In order to setup the automl run the following tasks were performed:
 * Set experiment_timeout_minutes (20): In order to limit consumed resources we set a max time out for the experiment. 
 * Enable_early_termination (True):  Abandon models that are not more accurate than currently completed models
 * Max_concurrent_iterations (5): Represents the maximum number of iterations that would be executed in parallel
+ Below is a screeen shot of the run widget as the run was performed. 
+ 
+![Widget](Images/Automl/Widget.JPG)
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+Below shows the results of our run.  As you can see our primary metric (Accuracy) varies by the model tested. Also included is a screen shot of the best model complete
+with parameters. 
+
+![Models](Images/Automl/DifferentModels.JPG)
+
+![Models](Images/Automl/BestModels.JPG)
+
+
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
