@@ -3,6 +3,9 @@
 
 The project uses Insurance Crosssell  Dataset in azure workspace to train models using both Hyperdrive and AutoML.  The best model is determined and then a endpoint is created and tested using python sdk. The project was implemented using VS code and Azure Machine Learning Studio. 
 
+# Project Architecture 
+![Architecture](Images/Automl/TopImage.JPG)
+
 ## Project Set Up and Installation
 The project requires access to a Azure Machine Learning account and the crosssell dataset.  Link to the dataset is provided later in this document.
 
