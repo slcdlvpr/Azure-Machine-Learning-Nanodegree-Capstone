@@ -46,7 +46,7 @@ with parameters.
 
 ![Models](Images/Automl/DifferentModels.JPG)
 
-![Models](Images/Automl/BestModels.JPG)
+![Models](Images/Automl/BestModel.JPG)
 
 
 
