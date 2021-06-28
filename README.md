@@ -96,11 +96,7 @@ As can be seen above the hyperdrive model was seen to be the most accurate. In f
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+<a href = "http://somup.com/cr1uf9qPl4">Screen Cast</a>
 
 ## Standout Suggestions
 * I added support for application insights,  this is a valuable tool for evaluating issues with an endpoint. 
