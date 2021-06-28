@@ -74,9 +74,12 @@ Setup the following
 ### Results
 ![HyperWidget](Images/HyperParameter/Widget.JPG)
 
-Below shows the different runs in the hyperparameter search space.  Note that each run shows the different parameters used for that run. 
-![HyperWidget](Images/HyperParameter/Runs.JPG)
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+Below shows the different runs in the hyperparameter search space.  Note that each run shows the different parameters used for that run.  
+![hyperruns](Images/HyperParameter/Runs.JPG)
+
+Best Model Screen Shot with Parameters
+![hypermodel](Images/HyperParameter/BestModel.JPG)
+
 
 ### Things to improve
 * Convert model to onyx so that it can be easily shared. 
@@ -86,16 +89,18 @@ Below shows the different runs in the hyperparameter search space.  Note that ea
 ## Model Deployment
 As can be seen above the hyperdrive model was seen to be the most accurate. In fact the hyperdrive model was highly consistent across a wide range of hyperparameters. In discussing this with one of the mentors they indicated that the runs had completed and that the model was just very well suited for this dataset. In order to complete the lab I deployed the hyperdrive model and then tested the endpoint.  Screen shots from the test are shown below. 
 
+![endtest](Images/HyperParameter/EndpointTest.JPG)
 
 
-
+![endhealthy](Images/HyperParameter/EndpointHealthy.JPG)
 
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+* I added support for application insights,  this is a valuable tool for evaluating issues with an endpoint. 
