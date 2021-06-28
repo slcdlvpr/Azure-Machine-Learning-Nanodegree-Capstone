@@ -42,22 +42,35 @@ In order to setup the automl run the following tasks were performed:
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 Below shows the results of our run.  As you can see our primary metric (Accuracy) varies by the model tested. Also included is a screen shot of the best model complete
-with parameters. 
+with parameters. The bottom screen shot shows hyper parameters used with the model. 
 
 ![Models](Images/Automl/DifferentModels.JPG)
 
 ![Models](Images/Automl/BestModel.JPG)
 
+![Models](Images/Automl/HyperParameters.JPG)
 
+### Primary Parameter (Best AutoML Model)
+Accuracy: 72.1%
+![Models](Images/Automl/SummaryGraph.JPG)
 
-### Evaluation
+### Feature Evaluation
 
 When elements of the data were examined it was found that a single feature was found to have an outsized impact on the likelyhood of a customer purchase. 
 
 ![Importance](Images/Automl/FeatureImportance.JPG)
 
+
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+The model choosen for the hyperparameter run is Logistic Regression. In order to setup the run there were several tasks that need to be performed. 
+
+Setup the following 
+* RandomParameterSampling setup:  This was selected because it would allow the range of values selected for the run.  It also supports early termination of a runs that are underperforming. 
+* BanditPolicy Setup :  Bandit terminates any runs where the primary metric is not within the specified slack factor compared to the best performing run.
+
+
+max_concurrent_runs (4): The maximum number of runs to execute concurrently.
+max_total_runs (21): The maximum total number of runs to create. This is the upper bound; there may be fewer runs when the sample space is smaller than this value.
 
 
 ### Results
