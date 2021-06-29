@@ -92,9 +92,8 @@ As can be seen above the hyperdrive model was seen to be the most accurate. In f
 There were three key elements of the deployment. 
 
 * Inference Script:  The inference script describes how to configure the model to make predictions. It references the scoring script (entry_script property) and is used to locate all the resources required for the deployment. In short inference script is used to define the software dependencies needed for the deployment.  
-** The Inference script references the environment which defines the dependencies needed to execute the model. These are defined in the project environment.yml file. 
-** Scoring script this script contains the python code required to accept a request for a prediction and return the models response 
-
+* Environment which defines the dependencies needed to execute the model. These requirments are defined in the project environment.yml file. This is passed in as part of the inference script properties 
+* Scoring script this script contains the python code required to accept a request for a prediction and return the models response.  This code can be found in the score.py file.  
 The model was deployed through use of the Python SDK.  Below is a screen shot of the code used to deploy the model 
 ![endtest](Images/HyperParameter/Deployment.JPG)
 
