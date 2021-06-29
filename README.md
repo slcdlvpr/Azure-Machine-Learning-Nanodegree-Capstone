@@ -95,6 +95,7 @@ There were three key elements of the deployment.
 * Environment which defines the dependencies needed to execute the model. These requirments are defined in the project environment.yml file. This is passed in as part of the inference script properties 
 * Scoring script this script contains the python code required to accept a request for a prediction and return the models response.  This code can be found in the score.py file.  
 The model was deployed through use of the Python SDK.  Below is a screen shot of the code used to deploy the model 
+
 ![endtest](Images/HyperParameter/Deployment.JPG)
 
 Once deployed below is the process for testing the model. The defined endpoint is sent a json formatted data and a result is returned.  
