@@ -60,6 +60,7 @@ with parameters. The bottom screen shot shows hyper parameters used with the mod
 Below is the completed run with Id. 
 ![Models](Images/Automl/NewRun.JPG)
 
+Best Model
 ![Models](Images/Automl/BestModel.JPG)
 
 
