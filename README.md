@@ -87,7 +87,18 @@ Best Model Screen Shot with Parameters
 * Do additional testing on the hyperdrive run to see if a larger dataset results in the same accuracy -- when this is available. 
 
 ## Model Deployment
-As can be seen above the hyperdrive model was seen to be the most accurate. In fact the hyperdrive model was highly consistent across a wide range of hyperparameters. In discussing this with one of the mentors they indicated that the runs had completed and that the model was just very well suited for this dataset. In order to complete the lab I deployed the hyperdrive model and then tested the endpoint.  Screen shots from the test are shown below. 
+As can be seen above the hyperdrive model was seen to be the most accurate. In fact the hyperdrive model was highly consistent across a wide range of hyperparameters. In discussing this with one of the mentors they indicated that the runs had completed and that the model was just very well suited for this dataset. In order to complete the lab I deployed the hyperdrive model and then tested the endpoint.  
+
+There were three key elements of the deployment. 
+
+* Inference Script:  The inference script describes how to configure the model to make predictions. It references the scoring script (entry_script property) and is used to locate all the resources required for the deployment. In short inference script is used to define the software dependencies needed for the deployment.  
+** The Inference script references the environment which defines the dependencies needed to execute the model. These are defined in the project environment.yml file. 
+** Scoring script this script contains the python code required to accept a request for a prediction and return the models response 
+
+The model was deployed through use of the Python SDK.  Below is a screen shot of the code used to deploy the model 
+![endtest](Images/HyperParameter/Deployment.JPG)
+
+Once deployed below is the process for testing the model. The defined endpoint is sent a json formatted data and a result is returned.  
 
 ![endtest](Images/HyperParameter/EndpointTest.JPG)
 
