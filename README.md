@@ -28,6 +28,17 @@ Ths client is an Insurance company that has provided Health Insurance to its cus
 Data is accessed via a dataset after it is downloaded from Kaggle and uploaded into the Azure ML studio. 
 Raw data can be accessed here <a href = "https://www.kaggle.com/anmolkumar/health-insurance-cross-sell-prediction">Crosssell Dataset</a>
 
+The process for creating the dataset is shown below the ML studio allows for the upload of files and creation of a named dataset. 
+
+![uploaddataset](Images/Automl/UploadDataset.JPG)
+
+![uploadfiledataset](Images/Automl/UploadFileSelect.JPG)
+
+Once the process is completed then you can use code shown below to access the registered dataset. 
+
+![accessdataset](Images/Automl/AccessDataset.JPG)
+
+
 ## Automated ML
 In order to setup the automl run the following tasks were performed:
 
