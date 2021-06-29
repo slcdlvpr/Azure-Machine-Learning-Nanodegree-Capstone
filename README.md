@@ -53,11 +53,15 @@ In order to setup the automl run the following tasks were performed:
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 Below shows the results of our run.  As you can see our primary metric (Accuracy) varies by the model tested. Also included is a screen shot of the best model complete
-with parameters. The bottom screen shot shows hyper parameters used with the model. 
+with parameters. The bottom screen shot shows hyper parameters used with the model.  
 
 ![Models](Images/Automl/DifferentModels.JPG)
 
+Below is the completed run with Id. 
+![Models](Images/Automl/NewRun.JPG)
+
 ![Models](Images/Automl/BestModel.JPG)
+
 
 ![Models](Images/Automl/HyperParameters.JPG)
 
